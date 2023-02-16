@@ -346,12 +346,12 @@ const Login = ({
           <img src={gc} alt="gclogo" className="logo" />
           <img src={gymkhana} alt="gymkhana" className="logo2" />
           <div className="content">
-            <h3 style={{ fontSize: "30px", fontWeight: "600" }}>
+            <h3 style={{ fontSize: "35px", fontWeight: "600" }}>
               General Championships 2023
             </h3>
             <h3
               style={{
-                fontSize: "35px",
+                fontSize: "25px",
                 fontWeight: "600",
                 marginBottom: "15px ",
                 marginTop: "15px",
