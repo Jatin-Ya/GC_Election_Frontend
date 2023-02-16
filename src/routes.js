@@ -8,6 +8,7 @@ import Show404 from "./Show404";
 import Show200 from "./Show200";
 
 import { WARDEN_EMAIL } from "./constants";
+import Finished from "./Finished";
 
 const passProps = ({ user, updateUser, profile, updateProfile, HOSTEL, updateHOSTEL }) => {
   // if (user?.email === WARDEN_EMAIL) {
@@ -80,18 +81,19 @@ const passProps = ({ user, updateUser, profile, updateProfile, HOSTEL, updateHOS
     //   path: "/login",
     //   element: <Login user={user} updateUser={updateUser} />,
     // },
-    {
-            path: "/",
-            element: <Layout user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} />,
-            children: [
-    { path: "/home", element: <Home user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
-    { path: "/results", element: <Result user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
-    { path: "/voted", element: <Show200 user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
-    { path: "/404", element: <Show404 user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
-    { path: "/403", element: <Show403 user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
-    { path: "/", element: <Login user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
-  ],
-      },
+  //   {
+  //           path: "/",
+  //           element: <Layout user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} />,
+  //           children: [
+  //   { path: "/home", element: <Home user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
+  //   { path: "/results", element: <Result user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
+  //   { path: "/voted", element: <Show200 user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
+  //   { path: "/404", element: <Show404 user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
+  //   { path: "/403", element: <Show403 user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
+  //   { path: "/", element: <Login user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/> },
+  // ],
+  //     },
+  {path: "/", element: <Finished user={user} updateUser={updateUser} profile={profile} updateProfile={updateProfile} HOSTEL={HOSTEL} updateHOSTEL={updateHOSTEL}/>}
   ];
 };
 
