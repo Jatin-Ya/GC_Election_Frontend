@@ -1,18 +1,21 @@
 import { GoogleLogout } from "react-google-login";
 import { Avatar, Button } from "@mui/material";
-import { googleLogout } from "@react-oauth/google"
+import { googleLogout } from "@react-oauth/google";
 import { CLIENT_ID } from "../constants";
 import { useNavigate } from "react-router-dom";
+import gclogo from "../assets/GClogo2023.jpg";
+import gymkhana from "../assets/gymkhana.png";
+import styles from "./Header.module.css";
 
-const LogoutButton = ({ user, profile, updateProfile, updateUser  }) => {
-  const navigate = useNavigate()
+const LogoutButton = ({ user, profile, updateProfile, updateUser }) => {
+  const navigate = useNavigate();
 
   const logOut = () => {
     googleLogout();
     updateUser(null);
     updateProfile([]);
     navigate("/");
-};
+  };
   return (
     <GoogleLogout
       clientId={CLIENT_ID}
@@ -23,7 +26,7 @@ const LogoutButton = ({ user, profile, updateProfile, updateUser  }) => {
             variant="contained"
             onClick={() => {
               logOut();
-              
+
               // renderProps.onClick();
             }}
             style={{
@@ -51,17 +54,27 @@ const LogoutButton = ({ user, profile, updateProfile, updateUser  }) => {
   );
 };
 
-const Header = ({ user, profile, updateProfile, updateUser  }) => {
+const Header = ({ user, profile, updateProfile, updateUser }) => {
   return (
     <div
       style={{
         display: "flex",
-        justifyContent: "flex-end",
-        padding: "10px 20px",
+        justifyContent: "space-between",
+        padding: "2rem",
+        alignItems: "center",
       }}
     >
+      <div style={{ marginRight: "20px" }}>
+        <img src={gclogo} alt="GC Logo" className={styles.logos} />
+        <img src={gymkhana} alt="Gymkhana Logo" className={styles.logos} />
+      </div>
       <div>
-        <LogoutButton user={user} profile={profile} updateProfile={updateProfile} updateUser={updateUser}/>
+        <LogoutButton
+          user={user}
+          profile={profile}
+          updateProfile={updateProfile}
+          updateUser={updateUser}
+        />
         {/* <Button>Logout</Button> */}
       </div>
     </div>

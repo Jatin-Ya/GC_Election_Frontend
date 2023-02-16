@@ -1,32 +1,38 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import dataHostels from '../assets/data.json';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import dataHostels from "../assets/data.json";
 
-import { Avatar, Card, Button, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import {
+  Avatar,
+  Card,
+  Button,
+  Typography,
+  CircularProgress,
+} from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
-import { HOSTEL_NAME, SERVER_URL } from '../constants';
+import { HOSTEL_NAME, SERVER_URL } from "../constants";
 
 const useStyles = makeStyles({
   cntsnt: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '20px',
-    cursor: 'pointer',
-    transition: '200ms all ease-in-out',
-    transform: 'scale(1)',
-    marginBottom: '20px',
-    boxShadow: '0px 0px 10px 2px rgb(0,0,0,0.1)',
-    '&:hover': {
-      transform: 'scale(1.05)',
-      backgroundColor: 'blue',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "20px",
+    cursor: "pointer",
+    transition: "200ms all ease-in-out",
+    transform: "scale(1)",
+    marginBottom: "20px",
+    boxShadow: "0px 0px 10px 2px rgb(0,0,0,0.1)",
+    "&:hover": {
+      transform: "scale(1.05)",
+      backgroundColor: "blue",
     },
   },
   image: {
-    '& img': {
-      objectFit: 'contain !important',
+    "& img": {
+      objectFit: "contain !important",
     },
   },
 });
@@ -43,8 +49,7 @@ const Home = ({ user, profile, HOSTEL }) => {
   const [page, setPage] = useState(0);
 
   const [submitted, setSubmitted] = useState(false);
-
-  
+  const [isLoading, setIsLoading] = useState(false);
 
   const vote = () => {
     console.log(choices);
@@ -57,7 +62,7 @@ const Home = ({ user, profile, HOSTEL }) => {
         ...choices,
       })
       .then((response) => {
-        if (response.status === 200) navigate('/voted', { replace: true });
+        if (response.status === 200) navigate("/voted", { replace: true });
       })
       .catch((error) => {
         const code = error.response.status;
@@ -73,7 +78,7 @@ const Home = ({ user, profile, HOSTEL }) => {
   contestants?.forEach((el) => {
     const positions = [];
 
-    if (el.position === 'msec') positions.push(el.position + 1);
+    if (el.position === "msec") positions.push(el.position + 1);
     else positions.push(el.position);
 
     // if (data.double.includes(el.position)) {
@@ -96,44 +101,44 @@ const Home = ({ user, profile, HOSTEL }) => {
 
   const showFullName = (post) => {
     switch (post) {
-      case 'coordinator':
-        return 'Coordinator';
-      case 'CS':
-        return 'Computer Science and Engineering';
-      case 'CE':
-        return 'Civil';
-      case 'EE':
-        return 'Electrical Engineering';
-      case 'ECE':
-        return 'ECE + META';
-      case 'PHD':
-        return 'PHD';
-      case 'MSC':
-        return 'MSC';
-      case 'ME':
-        return 'Mechanical';
-      case 'MTECH':
-        return 'MTECH';
+      case "coordinator":
+        return "Coordinator";
+      case "CS":
+        return "Computer Science and Engineering";
+      case "CE":
+        return "Civil";
+      case "EE":
+        return "Electrical Engineering";
+      case "ECE":
+        return "ECE + META";
+      case "PHD":
+        return "PHD";
+      case "MSC":
+        return "MSC";
+      case "ME":
+        return "Mechanical";
+      case "MTECH":
+        return "MTECH";
       default:
-        return 'Post';
+        return "Post";
     }
   };
 
   return (
-    <div style={{ padding: '2%' }}>
+    <div style={{ padding: "2%" }}>
       <Typography
-        variant='h3'
+        variant="h3"
         style={{
-          marginBottom: '2%',
-          letterSpacing: '3px',
+          marginBottom: "2%",
+          letterSpacing: "3px",
         }}
       >
         GC Elections
       </Typography>
       <Typography
-        variant='h5'
+        variant="h5"
         style={{
-          marginBottom: '4%',
+          marginBottom: "4%",
         }}
       >
         {showFullName(HOSTEL)}
@@ -145,22 +150,22 @@ const Home = ({ user, profile, HOSTEL }) => {
           .filter((post, index) => index === page)
           .map((post, index) => {
             return (
-              <div key={'post-' + index} style={{ margin: '20px' }}>
+              <div key={"post-" + index} style={{ margin: "20px" }}>
                 <Card
                   style={{
-                    padding: '30px',
-                    boxShadow: '0px 0px 10px 2px rgb(0,0,0,0.1)',
+                    padding: "30px",
+                    boxShadow: "0px 0px 10px 2px rgb(0,0,0,0.1)",
                   }}
                 >
-                  <Typography variant='h6' style={{ marginBottom: '20px' }}>
+                  <Typography variant="h6" style={{ marginBottom: "20px" }}>
                     {showFullName(post[0])}
                   </Typography>
                   <div
                     style={{
-                      display: 'flex',
-                      justifyContent: 'space-evenly',
-                      padding: '20px 0px',
-                      flexWrap: 'wrap',
+                      display: "flex",
+                      justifyContent: "space-evenly",
+                      padding: "20px 0px",
+                      flexWrap: "wrap",
                     }}
                   >
                     {post[1].map((cnt) => {
@@ -168,27 +173,27 @@ const Home = ({ user, profile, HOSTEL }) => {
                         <Card
                           className={classes.cntsnt}
                           style={{
-                            width: '120px',
+                            width: "120px",
                             backgroundColor:
                               choices[post[0]] === cnt.email
-                                ? 'rgb(107, 209, 249,0.4)'
-                                : 'inherit',
+                                ? "rgb(107, 209, 249,0.4)"
+                                : "inherit",
                             filter:
-                              post[0] === 'msec2' &&
-                              choices['msec1'] === cnt.email
-                                ? 'opacity(0.4)'
-                                : 'opacity(1)',
+                              post[0] === "msec2" &&
+                              choices["msec1"] === cnt.email
+                                ? "opacity(0.4)"
+                                : "opacity(1)",
                           }}
-                          key={'contestant-' + cnt.email}
+                          key={"contestant-" + cnt.email}
                           onClick={() => {
                             if (
-                              post[0] === 'msec2' &&
-                              choices['msec1'] === cnt.email
+                              post[0] === "msec2" &&
+                              choices["msec1"] === cnt.email
                             )
                               return;
                             if (
-                              post[0] === 'msec1' &&
-                              choices['msec2'] === cnt.email
+                              post[0] === "msec1" &&
+                              choices["msec2"] === cnt.email
                             )
                               setChoices({
                                 ...choices,
@@ -201,14 +206,14 @@ const Home = ({ user, profile, HOSTEL }) => {
                         >
                           <Avatar
                             style={{
-                              height: '80px',
-                              width: '80px',
+                              height: "80px",
+                              width: "80px",
                             }}
                             className={classes.image}
                             src={
-                              '/images/' +
-                              cnt.email.split('@iitbbs.ac.in')[0] +
-                              '.jpg'
+                              "/images/" +
+                              cnt.email.split("@iitbbs.ac.in")[0] +
+                              ".jpg"
                             }
                           />
                           {cnt.name}
@@ -217,36 +222,36 @@ const Home = ({ user, profile, HOSTEL }) => {
                     })}
                   </div>
                   <div
-                    style={{ display: 'flex', justifyContent: 'space-evenly' }}
+                    style={{ display: "flex", justifyContent: "space-evenly" }}
                   >
                     <Card
                       style={{
-                        padding: '10px 20px',
-                        boxShadow: '0px 0px 10px 2px rgb(0,0,0,0.1)',
-                        cursor: 'pointer',
+                        padding: "10px 20px",
+                        boxShadow: "0px 0px 10px 2px rgb(0,0,0,0.1)",
+                        cursor: "pointer",
                         backgroundColor:
-                          choices[post[0]] === 'NOTA'
-                            ? 'rgb(107, 209, 249,0.4)'
-                            : 'inherit',
+                          choices[post[0]] === "NOTA"
+                            ? "rgb(107, 209, 249,0.4)"
+                            : "inherit",
                       }}
                       onClick={() => {
-                        setChoices({ ...choices, [post[0]]: 'NOTA' });
+                        setChoices({ ...choices, [post[0]]: "NOTA" });
                       }}
                     >
                       None of the Above
                     </Card>
                     <Card
                       style={{
-                        padding: '10px 20px',
-                        boxShadow: '0px 0px 10px 2px rgb(0,0,0,0.1)',
-                        cursor: 'pointer',
+                        padding: "10px 20px",
+                        boxShadow: "0px 0px 10px 2px rgb(0,0,0,0.1)",
+                        cursor: "pointer",
                         backgroundColor:
-                          choices[post[0]] === 'AFV'
-                            ? 'rgb(107, 209, 249,0.4)'
-                            : 'inherit',
+                          choices[post[0]] === "AFV"
+                            ? "rgb(107, 209, 249,0.4)"
+                            : "inherit",
                       }}
                       onClick={() => {
-                        setChoices({ ...choices, [post[0]]: 'AFV' });
+                        setChoices({ ...choices, [post[0]]: "AFV" });
                       }}
                     >
                       Abstain from Voting
@@ -255,15 +260,15 @@ const Home = ({ user, profile, HOSTEL }) => {
                 </Card>
                 <div
                   style={{
-                    position: 'relative',
-                    marginTop: '20px',
+                    position: "relative",
+                    marginTop: "20px",
                   }}
                 >
                   {page !== 0 && (
                     <Button
-                      variant='contained'
-                      color='primary'
-                      style={{ position: 'absolute', left: '0px' }}
+                      variant="contained"
+                      color="primary"
+                      style={{ position: "absolute", left: "0px" }}
                       onClick={() => {
                         setPage(page - 1);
                       }}
@@ -273,9 +278,9 @@ const Home = ({ user, profile, HOSTEL }) => {
                   )}
                   {page !== Object.entries(posts).length - 1 ? (
                     <Button
-                      variant='contained'
-                      color='primary'
-                      style={{ position: 'absolute', right: '0px' }}
+                      variant="contained"
+                      color="primary"
+                      style={{ position: "absolute", right: "0px" }}
                       onClick={() => {
                         setPage(page + 1);
                       }}
@@ -285,17 +290,22 @@ const Home = ({ user, profile, HOSTEL }) => {
                     </Button>
                   ) : (
                     <Button
-                      variant='contained'
-                      color='primary'
-                      style={{ position: 'absolute', right: '0px' }}
+                      variant="contained"
+                      color="primary"
+                      style={{ position: "absolute", right: "0px" }}
                       onClick={() => {
+                        setIsLoading((state) => true);
                         setSubmitted(true);
                         // navigate('/voted');
                         vote();
                       }}
                       disabled={!choices[post[0]] || submitted}
                     >
-                      SUBMIT
+                      {!isLoading ? (
+                        "SUBMIT"
+                      ) : (
+                        <CircularProgress size={20} color="inherit" />
+                      )}
                     </Button>
                   )}
                   <br />
