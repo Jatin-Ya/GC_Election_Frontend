@@ -1,0 +1,41 @@
+{
+  "hostel": "GHR",
+  "hostelName": "Ganga Hall of Residence",
+  "contestants": [
+    {
+      "email": "20ee02005@iitbbs.ac.in",
+      "name": "Parthvi Jain",
+      "position": "gsec"
+    },
+    {
+      "email": "20cs01023@iitbbs.ac.in",
+      "name": "Rishithaa Gottipati",
+      "position": "gsec"
+    },
+    {
+      "email": "uk21@iitbbs.ac.in",
+      "name": "Uppada Keerthi",
+      "position": "gsec"
+    },
+    {
+      "email": "20ee01053@iitbbs.ac.in",
+      "name": "Suchitra Kushwaha",
+      "position": "msec"
+    },
+    {
+      "email": "20ce02017@iitbbs.ac.in",
+      "name": "Krishna Harshita Chintalapudi",
+      "position": "msec"
+    },
+    {
+      "email": "bs26@iitbbs.ac.in",
+      "name": "Boda Swathi",
+      "position": "msec"
+    },
+    {
+      "email": "20ee01065@iitbbs.ac.in",
+      "name": "Abothu Sreshta Bhavita",
+      "position": "hsec"
+    }
+  ]
+}

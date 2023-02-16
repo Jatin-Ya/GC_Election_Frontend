@@ -1,0 +1,72 @@
+{
+  "hostel": "BHR",
+  "hostelName": "Brahmaputra Hall Of Residence",
+  "double": ["msec"],
+  "contestants": [
+    {
+      "name": "V Harshavardan",
+      "email": "vh14@iitbbs.ac.in",
+      "position": "gsec"
+    },
+    {
+      "email": "kmr4@iitbbs.ac.in",
+      "name": "Keshav meena",
+      "position": "hsec"
+    },
+    {
+      "email": "20ec01044@iitbbs.ac.in",
+      "name": "Chandramohan",
+      "position": "hsec"
+    },
+    {
+      "name": "Pawan Kumar",
+      "email": "a21ce09018@iitbbs.ac.in",
+      "position": "msec"
+    },
+    {
+      "name": "Dhananjay Lohiya",
+      "email": "20ce01015@iitbbs.ac.in",
+      "position": "msec"
+    },
+    {
+      "name": "Krishna dutta tripathi",
+      "email": "kdt13@iitbbs.ac.in",
+      "position": "msec"
+    },
+    {
+      "name": "MALOVATH AMRUTH",
+      "email": "20me01066@iitbbs.ac.in",
+      "position": "msec"
+    },
+    {
+      "name": "Om Saran",
+      "email": "20cs02007@iitbbs.ac.in",
+      "position": "msec"
+    },
+    {
+      "name": "Divyesh Cirikonda",
+      "email": "cd11@iitbbs.ac.in",
+      "position": "msec"
+    },
+    {
+      "name": "Ayush Agnihotri",
+      "email": "aa28@iitbbs.ac.in",
+      "position": "msec"
+    },
+    {
+      "name": "Sahaj Kharidia",
+      "email": "20cs01004@iitbbs.ac.in",
+      "position": "msec"
+    },
+    {
+      "name": "Sahil Pal",
+      "email": "20ec01036@iitbbs.ac.in",
+      "position": "msec"
+    },
+    {
+      "name": "Chekuri Muni Siva Charan",
+      "email": "20cs01015@iitbbs.ac.in",
+      "position": "msec"
+    }
+  ]
+}

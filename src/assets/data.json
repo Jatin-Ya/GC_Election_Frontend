@@ -1,0 +1,108 @@
+{
+  "CS": {
+    "hostel": "CS",
+    "hostelName": "Brahmaputra Hall Of Residence",
+    "double": ["msec"],
+    "contestants": [
+      {
+        "name": "Sathvik Chilaka",
+        "email": "cs34@iitbbs.ac.in",
+        "position": "coordinator"
+      }
+    ]
+  },
+  "ECE": {
+    "hostel": "ECE",
+    "hostelName": "Ganga Hall of Residence",
+    "contestants": [
+      {
+        "email": "sd61@iitbbs.ac.in",
+        "name": "Sudhanshu Darakh",
+        "position": "coordinator"
+      }
+    ]
+  },
+  "EE": {
+    "hostel": "EE",
+    "hostelName": "Mahanadi Hall of Residence",
+    "double": ["msec"],
+    "contestants": [
+      {
+        "email": "tm32@iitbbs.ac.in",
+        "name": "Tanmay Mallick",
+        "position": "coordinator"
+      },
+      {
+        "email": "db20@iitbbs.ac.in",
+        "name": "Bhasvana Doni",
+        "position": "coordinator"
+      }
+    ]
+  },
+  "CE": {
+    "hostel": "CE",
+    "hostelName": "Rushikulya Hall of Residence",
+    "contestants": [
+      {
+        "email": "nk27@iitbbs.ac.in",
+        "name": "N.Koushik ",
+        "position": "coordinator"
+      },
+      {
+        "email": "akr12@iitbbs.ac.in",
+        "name": "Ajinkya Raut",
+        "position": "coordinator"
+      }
+    ]
+  },
+  "ME": {
+    "hostel": "ME",
+    "hostelName": "Rushikulya Hall of Residence",
+    "contestants": [
+      {
+        "email": "21ce01009@iitbbs.ac.in",
+        "name": "YUVRAJ PRATAP SINGH",
+        "position": "coordinator"
+      },
+      {
+        "email": "21me01069@iitbbs.ac.in",
+        "name": "M. Praveen Kumar",
+        "position": "coordinator"
+      }
+    ]
+  },
+  "MTECH": {
+    "hostel": "MTECH",
+    "hostelName": "Rushikulya Hall of Residence",
+    "contestants": [
+      {
+        "email": "dds12@iitbbs.ac.in",
+        "name": "Divesh Shet",
+        "position": "coordinator"
+      }
+    ]
+  },
+  "PHD": {
+    "hostel": "PHD",
+    "hostelName": "Rushikulya Hall of Residence",
+    "contestants": [
+      {
+        "email": "vv20@iitbbs.ac.in",
+        "name": "Vijay Vishwakarma",
+        "position": "coordinator"
+      }
+    ]
+  },
+  "MSC": {
+    "hostel": "MSC",
+    "hostelName": "Rushikulya Hall of Residence",
+    "contestants": [
+      {
+        "email": "21gg05020@iitbbs.ac.in",
+        "name": "Akash Kumar Mallick",
+        "position": "coordinator"
+      }
+    ]
+  }
+
+}

@@ -1,0 +1,16 @@
+{
+  "hostel": "SHR",
+  "hostelName": "Subarnarekha Hall of Residence",
+  "contestants": [
+    {
+      "email": "21ee01032@iitbbs.ac.in",
+      "name": "Mahi Singh",
+      "position": "gsec"
+    },
+    {
+      "email": "21gg05010@iitbbs.ac.in",
+      "name": "Anusri Saha",
+      "position": "msec"
+    }
+  ]
+}

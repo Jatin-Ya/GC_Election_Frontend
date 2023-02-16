@@ -1,0 +1,37 @@
+{
+  "hostel": "MHR",
+  "hostelName": "Mahanadi Hall of Residence",
+  "double": ["msec"],
+  "contestants": [
+    {
+      "email": "vrp11@iitbbs.ac.in",
+      "name": "Rithik Prasad.V",
+      "position": "gsec"
+    },
+    {
+      "email": "ssc15@iitbbs.ac.in",
+      "name": "Shaurya Singh Chauhan",
+      "position": "msec"
+    },
+    {
+      "email": "ska13@iitbbs.ac.in",
+      "name": "SATISH KUMAR ASIPI",
+      "position": "msec"
+    },
+    {
+      "email": "rg24@iitbbs.ac.in",
+      "name": "Rohit Gaikwad",
+      "position": "msec"
+    },
+    {
+      "email": "21mf06007@iitbbs.ac.in",
+      "name": "SUBHAM BADPANDA",
+      "position": "msec"
+    },
+    {
+      "email": "kvk11@iitbbs.ac.in",
+      "name": "G V NITIN KRISHNA",
+      "position": "hsec"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "hostel": "RHR",
+  "hostelName": "Rushikulya Hall of Residence",
+  "contestants": [
+    {
+      "email": "21ce01009@iitbbs.ac.in",
+      "name": "YUVRAJ PRATAP SINGH",
+      "position": "gsec"
+    },
+    {
+      "email": "21me01069@iitbbs.ac.in",
+      "name": "M. Praveen Kumar",
+      "position": "gsec"
+    },
+    {
+      "email": "21ec01021@iitbbs.ac.in",
+      "name": "Sambit Mishra",
+      "position": "msec"
+    },
+    {
+      "email": "21me01026@iitbbs.ac.in",
+      "name": "Kovid Sharma",
+      "position": "msec"
+    },
+    {
+      "email": "21ce01058@iitbbs.ac.in",
+      "name": "Himanshu verma",
+      "position": "msec"
+    },
+    {
+      "email": "21ec01044@iitbbs.ac.in",
+      "name": "PRIYANSHU MATHUR",
+      "position": "hsec"
+    },
+    {
+      "email": "21ec01022@iitbbs.ac.in",
+      "name": "SHUBH MODI",
+      "position": "hsec"
+    }
+  ]
+}
