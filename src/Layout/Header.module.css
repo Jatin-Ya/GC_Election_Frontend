@@ -4,6 +4,12 @@
 
 @media screen and (max-width: 480px) {
   .logos {
-    width: 100px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .logos {
+    width: 60px;
   }
 }
