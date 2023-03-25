@@ -212,14 +212,14 @@ const Login = ({
                 onChange={handleChange}
               >
                 <MenuItem value={""}>Select Branch</MenuItem>
-                <MenuItem value={"CS"}>CSE</MenuItem>
-                <MenuItem value={"ECE"}>ECE + Meta</MenuItem>
-                <MenuItem value={"EE"}>EE</MenuItem>
-                <MenuItem value={"CE"}>CE</MenuItem>
-                <MenuItem value={"ME"}>ME</MenuItem>
-                <MenuItem value={"MTECH"}>M.Tech</MenuItem>
-                <MenuItem value={"PHD"}>Ph.D</MenuItem>
-                <MenuItem value={"MSC"}>M.Sc</MenuItem>
+                <MenuItem value={"CS"}>SES</MenuItem>
+                <MenuItem value={"ECE"}>SBS + Meta</MenuItem>
+                <MenuItem value={"EE"}>SHSSM</MenuItem>
+                <MenuItem value={"CE"}>SIF</MenuItem>
+                <MenuItem value={"ME"}>SMS</MenuItem>
+                {/* <MenuItem value={"MTECH"}>M.Tech</MenuItem> */}
+                <MenuItem value={"PHD"}>SEOCS</MenuItem>
+                <MenuItem value={"MSC"}>SMMME</MenuItem>
               </Select>
             </FormControl>
             {/* <Button onClick={onCreateHandler}>Click</Button> */}
@@ -343,13 +343,14 @@ const Login = ({
       </div>
       <div className="panels-container">
         <div className="panel left-panel">
-          <img src={gc} alt="gclogo" className="logo" />
-          <img src={gymkhana} alt="gymkhana" className="logo2" />
+          {/* <img src={gc} alt="gclogo" className="logo" /> */}
+          {/* <img src={gymkhana} alt="gymkhana" className="logo2" /> */}
           <div className="content">
             <h3 style={{ fontSize: "35px", fontWeight: "600" }}>
-              General Championships 2023
+              {/* General Championships 2023 */}
+              Research Scholar Election
             </h3>
-            <h3
+            {/* <h3
               style={{
                 fontSize: "25px",
                 fontWeight: "600",
@@ -358,7 +359,7 @@ const Login = ({
               }}
             >
               Team Coordinators Election
-            </h3>
+            </h3> */}
           </div>
         </div>
       </div>

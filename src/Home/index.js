@@ -104,19 +104,26 @@ const Home = ({ user, profile, HOSTEL }) => {
       case "coordinator":
         return "Coordinator";
       case "CS":
-        return "Computer Science and Engineering";
+        // return "Computer Science and Engineering";
+        return "SES";
       case "CE":
-        return "Civil";
+        // return "Civil";
+        return "SIF";
       case "EE":
-        return "Electrical Engineering";
+        // return "Electrical Engineering";
+        return "SHSSM";
       case "ECE":
-        return "ECE + META";
+        // return "ECE + META";
+        return "SBS";
       case "PHD":
-        return "PHD";
+        // return "PHD";
+        return "SEOCS";
       case "MSC":
-        return "MSC";
+        // return "MSC";
+        return "SMMME";
       case "ME":
-        return "Mechanical";
+        // return "Mechanical";
+        return "SMS";
       case "MTECH":
         return "MTECH";
       default:
@@ -133,7 +140,8 @@ const Home = ({ user, profile, HOSTEL }) => {
           letterSpacing: "3px",
         }}
       >
-        GC Elections
+        {/* GC Elections */}
+        Research Council Elections
       </Typography>
       <Typography
         variant="h5"
