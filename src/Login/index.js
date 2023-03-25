@@ -3,13 +3,13 @@ import { GoogleLogin } from "@react-oauth/google";
 import { googleut, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import {
-  Button,
-  CircularProgress,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  SvgIcon,
+    Button,
+    CircularProgress,
+    FormControl,
+    InputLabel,
+    MenuItem,
+    Select,
+    SvgIcon,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
@@ -19,106 +19,106 @@ import gc from "../assets/GClogo2023.jpg";
 import gymkhana from "../assets/gymkhana.png";
 
 const Login = ({
-  user,
-  updateUser,
-  profile,
-  updateProfile,
-  HOSTEL,
-  updateHOSTEL,
+    user,
+    updateUser,
+    profile,
+    updateProfile,
+    HOSTEL,
+    updateHOSTEL,
 }) => {
-  const login = useGoogleLogin({
-    onSuccess: (codeResponse) => updateUser(codeResponse),
-    onError: (error) => console.log("Login Failed:", error),
-  });
+    const login = useGoogleLogin({
+        onSuccess: (codeResponse) => updateUser(codeResponse),
+        onError: (error) => console.log("Login Failed:", error),
+    });
 
-  const onCreateHandler = () => {
-    axios.post(`${SERVER_URL}/hostel/create`, {});
-  };
+    const onCreateHandler = () => {
+        axios.post(`${SERVER_URL}/hostel/create`, {});
+    };
 
-  useEffect(() => {
-    if (user) {
-      axios
-        .get(
-          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
-          {
-            headers: {
-              Authorization: `Bearer ${user.access_token}`,
-              Accept: "application/json",
-            },
-          }
-        )
-        .then((res) => {
-          updateProfile(res.data);
-          navigate("/home");
-        })
-        .catch((err) => console.log(err));
+    useEffect(() => {
+        if (user) {
+            axios
+                .get(
+                    `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
+                    {
+                        headers: {
+                            Authorization: `Bearer ${user.access_token}`,
+                            Accept: "application/json",
+                        },
+                    }
+                )
+                .then((res) => {
+                    updateProfile(res.data);
+                    navigate("/home");
+                })
+                .catch((err) => console.log(err));
 
-      // axios.get(``)
-    }
-  }, [user]);
-  const navigate = useNavigate();
+            // axios.get(``)
+        }
+    }, [user]);
+    const navigate = useNavigate();
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [userData, setUserData] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [userData, setUserData] = useState(null);
 
-  const successResponseGoogle = (res) => {
-    console.log(res);
-    // const curr = {
-    //   firstName: res.profileObj.givenName,
-    //   lastName: res.profileObj.familyName,
-    //   email: res.profileObj.email,
-    //   image: res.profileObj.imageUrl,
-    //   token: res.tokenId,
-    // };
-    console.log("Sucess");
-    // setUserData(curr);
-  };
+    const successResponseGoogle = (res) => {
+        console.log(res);
+        // const curr = {
+        //   firstName: res.profileObj.givenName,
+        //   lastName: res.profileObj.familyName,
+        //   email: res.profileObj.email,
+        //   image: res.profileObj.imageUrl,
+        //   token: res.tokenId,
+        // };
+        console.log("Sucess");
+        // setUserData(curr);
+    };
 
-  const failureResponseGoogle = (res) => {
-    console.log(res);
-    setIsLoading(false);
-  };
+    const failureResponseGoogle = (res) => {
+        console.log(res);
+        setIsLoading(false);
+    };
 
-  const onAutoLoadGoogle = (loggedIn) => {
-    if (!loggedIn) {
-      setIsLoading(false);
-    }
-  };
+    const onAutoLoadGoogle = (loggedIn) => {
+        if (!loggedIn) {
+            setIsLoading(false);
+        }
+    };
 
-  // useEffect(() => {
-  //   // if (userData && !userData.phone) {
-  //   //   getUser(userData.token);
-  //   // }
-  //   if (userData?.token) {
-  //     axios
-  //       .post(`${SERVER_URL}/auth/login`, {
-  //         tokenId: userData.token,
-  //         hostel: HOSTEL,
-  //       })
-  //       .then((response) => {
-  //         if (response.status === 200) {
-  //           updateUser(userData);
-  //         }
-  //       })
-  //       .catch((err) => {
-  //         setIsLoading(false);
+    // useEffect(() => {
+    //   // if (userData && !userData.phone) {
+    //   //   getUser(userData.token);
+    //   // }
+    //   if (userData?.token) {
+    //     axios
+    //       .post(`${SERVER_URL}/auth/login`, {
+    //         tokenId: userData.token,
+    //         hostel: HOSTEL,
+    //       })
+    //       .then((response) => {
+    //         if (response.status === 200) {
+    //           updateUser(userData);
+    //         }
+    //       })
+    //       .catch((err) => {
+    //         setIsLoading(false);
 
-  //         const errorCode = err.response.status;
-  //         updateUser({ ...userData, errorCode });
-  //       });
-  //   } else {
-  //     updateUser(userData);
-  //   }
-  // }, [userData]);
-  console.log(profile);
-  console.log(user);
+    //         const errorCode = err.response.status;
+    //         updateUser({ ...userData, errorCode });
+    //       });
+    //   } else {
+    //     updateUser(userData);
+    //   }
+    // }, [userData]);
+    console.log(profile);
+    console.log(user);
 
-  // const branch = '';
+    // const branch = '';
 
-  const handleChange = (event) => {
-    updateHOSTEL(event.target.value);
-    console.log(event.target.value);
-  };
+    const handleChange = (event) => {
+        updateHOSTEL(event.target.value);
+        console.log(event.target.value);
+    };
 
   return (
     // <div
@@ -338,19 +338,131 @@ const Login = ({
               cookiePolicy={'single_host_origin'}
               padding={100}
             /> */}
-          </form>
-        </div>
-      </div>
-      <div className="panels-container">
-        <div className="panel left-panel">
-          {/* <img src={gc} alt="gclogo" className="logo" /> */}
-          {/* <img src={gymkhana} alt="gymkhana" className="logo2" /> */}
-          <div className="content">
-            <h3 style={{ fontSize: "35px", fontWeight: "600" }}>
-              {/* General Championships 2023 */}
-              Research Scholar Election
-            </h3>
-            {/* <h3
+                    </form>
+                </div>
+            </div>
+            <div className="panels-container">
+                <div className="panel left-panel">
+                    {/* <img src={gc} alt="gclogo" className="logo" /> */}
+                    {/* <img src={gymkhana} alt="gymkhana" className="logo2" /> */}
+                    <div className="content">
+                        <h3
+                            style={{
+                                fontSize: "35px",
+                                fontWeight: "600",
+                                textAlign: "center",
+                            }}
+                        >
+                            {/* General Championships 2023 */}
+                            Research Scholar Election
+                        </h3>
+                        <div
+                            style={{
+                                border: "1px solid white",
+                                margin: "20px auto",
+                                width: 200,
+                            }}
+                        ></div>
+                        <div style={{ overflow: "scroll", flexGrow: 1 }}>
+                            <p>
+                                Welcome to the portal where you will choose your
+                                School’s representative in the Research Council.
+                                What is the purpose of forming this Council?
+                                Here goes the compilation of YOUR suggestions
+                                regarding the roles and responsibilities of this
+                                Council.
+                            </p>
+                            <h4>
+                                Research Council - Roles and Responsibilities
+                            </h4>
+                            <p>
+                                The Research Scholars’ Representative will be
+                                assisted by a Research Council comprising
+                                elected representatives from each School (viz.,
+                                School of Electrical Sciences, School of Basic
+                                Sciences, School of Humanities, Social Sciences
+                                and Management, School of Earth, Ocean and
+                                Climate Sciences, School of Minerals,
+                                Metallurgical and Materials Engineering, School
+                                of Infrastructure, and School of Mechanical
+                                Sciences).
+                            </p>
+                            <p>
+                                The Research Council will perform the following
+                                functions:
+                            </p>
+                            <p>
+                                1. Represent their respective schools’ concerns
+                                in the meetings with the RS Representative;
+                                <br />
+                                <br /> 2. Hold regular meetings with the
+                                scholars to hear their concerns; <br />
+                                <br /> 3. Resolve problems regarding the
+                                unavailability of equipment, systems, and
+                                software for individual departments;
+                                <br />
+                                <br />
+                                4. Draft proposals to fill any gaps in
+                                administration or academics in their respective
+                                Schools brought out by his/her fellow research
+                                colleagues;;
+                                <br />
+                                <br /> 5. Organising and motivating their
+                                respective schools’ participation during the
+                                Institute’s programmes;
+                                <br />
+                                <br />
+                                6. Share and augment career opportunities for
+                                research scholars in the fields of academics,
+                                research, and postdoctoral programs;
+                                <br />
+                                <br />
+                                7. Coordinate and manage the concerns regarding
+                                fellowships along with the Academic and Accounts
+                                Sections; and
+                                <br />
+                                <br />
+                                8. Initiate Social Media pages to spread the
+                                word about the excellent work done by research
+                                scholars at our Institute, simultaneously
+                                building a lasting research community through
+                                Instagram, Facebook, and LinkedIn.
+                            </p>
+                            <h4>Point of contact: </h4>
+                            <p>
+                                Jatin Yadav: 8278310665
+                                <br />
+                                Tushar Joshi: 8383006292
+                            </p>
+
+                            {/* <ul>
+                                <li>
+                                    Represent their respective schools’ concerns
+                                    in the meetings with the RS Representative;
+                                </li>
+                                <li>
+                                    Hold regular meetings with the scholars to
+                                    hear their concerns;
+                                </li>
+                                <li>
+                                    Resolve problems regarding the
+                                    unavailability of equipment, systems, and
+                                    software for individual departments;
+                                </li>
+                                <li>
+                                    Draft proposals to fill any gaps in
+                                    administration or academics in their
+                                    respective Schools brought out by his/her
+                                    fellow research colleagues;
+                                </li>
+                                <li>
+                                    Organising and motivating their respective
+                                    schools’ participation during the
+                                    Institute’s programmes;
+                                </li>
+                            </ul> */}
+                        </div>
+                        {/* <h3
               style={{
                 fontSize: "25px",
                 fontWeight: "600",
@@ -360,11 +472,11 @@ const Login = ({
             >
               Team Coordinators Election
             </h3> */}
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Login;
