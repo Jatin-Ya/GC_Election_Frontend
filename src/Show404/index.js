@@ -4,7 +4,7 @@ const Show404 = () => {
   return (
     <div>
       <br />
-      <h3>User not in this Branch</h3>
+      <h3>User not in this School</h3>
       <br />
       <img
         src={DontBelong}

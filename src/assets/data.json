@@ -5,20 +5,35 @@
     "double": ["msec"],
     "contestants": [
       {
-        "name": "Sathvik Chilaka",
-        "email": "cs34@iitbbs.ac.in",
-        "position": "coordinator"
+        "name": "TANIKONDA NISHANTH KUMAR",
+        "email": "s21ee09006@iitbbs.ac.in",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=1SUdsXpVtDZdcZYwLvyCiRFihSNHbMsgR"
+      },
+      {
+        "name": "Suraj kumar Prusty",
+        "email": "skp23@iitbbs.ac.in",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=1TsLFh0W7y2a3vxQUH2h308j2taNLb0QI"
       }
     ]
   },
+  
   "ECE": {
     "hostel": "ECE",
     "hostelName": "Ganga Hall of Residence",
     "contestants": [
       {
-        "email": "sd61@iitbbs.ac.in",
-        "name": "Sudhanshu Darakh",
-        "position": "coordinator"
+        "email": "db18@iitbbs.ac.in",
+        "name": "Debasish Behera",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=1IuLgKDjqatSjiumohAvZXDD0G00G7dEt"
+      },
+      {
+        "email": "S21ma09010@iitbbs.ac.in",
+        "name": "Piyush Verma",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=1ajdTqDT3zfR8UjaOqXQ3g6r8XlBNEGqk"
       }
     ]
   },
@@ -28,14 +43,16 @@
     "double": ["msec"],
     "contestants": [
       {
-        "email": "tm32@iitbbs.ac.in",
-        "name": "Tanmay Mallick",
-        "position": "coordinator"
+        "email": "ap59@iitbbs.ac.in",
+        "name": "Arindam Paul",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=1HnBpHp6uCQMx0gahecE6sCeSc2GRTT0K"
       },
       {
-        "email": "db20@iitbbs.ac.in",
-        "name": "Bhasvana Doni",
-        "position": "coordinator"
+        "email": "a21hs09003@iitbbs.ac.in",
+        "name": "RAJU DHULI",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=15O8zXN0sDpeb8dbZiqbpDVKXtEwTZLsS"
       }
     ]
   },
@@ -44,14 +61,16 @@
     "hostelName": "Rushikulya Hall of Residence",
     "contestants": [
       {
-        "email": "nk27@iitbbs.ac.in",
-        "name": "N.Koushik ",
-        "position": "coordinator"
+        "email": "a20ce09018@iitbbs.ac.in",
+        "name": "UTTAM KUMAR PANDIT",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=1t_th3ONYKk2Dt_rBcwtmDGy41FTuIziJ"
       },
       {
-        "email": "akr12@iitbbs.ac.in",
-        "name": "Ajinkya Raut",
-        "position": "coordinator"
+        "email": "S23CE09004@iitbbs.ac.in",
+        "name": "Anoop Kumar Tiwari",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=12CjZCNXsfiyHWjy42-qn2pYQr0XjrQ4h"
       }
     ]
   },
@@ -60,9 +79,10 @@
     "hostelName": "Rushikulya Hall of Residence",
     "contestants": [
       {
-        "email": "dds12@iitbbs.ac.in",
-        "name": "Divesh Shet",
-        "position": "coordinator"
+        "email": "rn15@iitbbs.ac.in",
+        "name": "Rakesh Nandan",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=1SUdsXpVtDZdcZYwLvyCiRFihSNHbMsgR"
       }
     ]
   },
@@ -73,7 +93,8 @@
       {
         "email": "21cs06008@iitbbs.ac.in",
         "name": "Bankim Mondal",
-        "position": "coordinator"
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=1SUdsXpVtDZdcZYwLvyCiRFihSNHbMsgR"
       }
     ]
   },
@@ -82,9 +103,10 @@
     "hostelName": "Rushikulya Hall of Residence",
     "contestants": [
       {
-        "email": "vv20@iitbbs.ac.in",
-        "name": "Vijay Vishwakarma",
-        "position": "coordinator"
+        "email": "knr11@iitbbs.ac.in",
+        "name": "Narayana Reddy",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=1SUdsXpVtDZdcZYwLvyCiRFihSNHbMsgR"
       }
     ]
   },
@@ -93,9 +115,10 @@
     "hostelName": "Rushikulya Hall of Residence",
     "contestants": [
       {
-        "email": "21gg05020@iitbbs.ac.in",
-        "name": "Akash Kumar Mallick",
-        "position": "coordinator"
+        "email": "s23mm09002@iitbbs.ac.in",
+        "name": "Ravishankar Suman",
+        "position": "coordinator",
+        "image": "https://drive.google.com/open?id=1SUdsXpVtDZdcZYwLvyCiRFihSNHbMsgR"
       }
     ]
   }

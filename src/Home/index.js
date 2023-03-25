@@ -102,7 +102,7 @@ const Home = ({ user, profile, HOSTEL }) => {
   const showFullName = (post) => {
     switch (post) {
       case "coordinator":
-        return "Coordinator";
+        return "Research Scholar Representative";
       case "CS":
         // return "Computer Science and Engineering";
         return "SES";

@@ -208,7 +208,7 @@ const Login = ({
                   width: "10rem",
                 }}
                 value={HOSTEL}
-                label="Branch"
+                label="School"
                 onChange={handleChange}
               >
                 <MenuItem value={""}>Select Branch</MenuItem>
