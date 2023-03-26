@@ -219,9 +219,7 @@ const Home = ({ user, profile, HOSTEL }) => {
                             }}
                             className={classes.image}
                             src={
-                              "/images/" +
-                              cnt.email.split("@iitbbs.ac.in")[0] +
-                              ".jpg"
+                              cnt.image
                             }
                           />
                           {cnt.name}
