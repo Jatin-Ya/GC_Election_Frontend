@@ -213,7 +213,7 @@ const Login = ({
               >
                 <MenuItem value={""}>Select Branch</MenuItem>
                 <MenuItem value={"CS"}>SES</MenuItem>
-                <MenuItem value={"ECE"}>SBS + Meta</MenuItem>
+                <MenuItem value={"ECE"}>SBS</MenuItem>
                 <MenuItem value={"EE"}>SHSSM</MenuItem>
                 <MenuItem value={"CE"}>SIF</MenuItem>
                 <MenuItem value={"ME"}>SMS</MenuItem>
@@ -354,7 +354,7 @@ const Login = ({
                             }}
                         >
                             {/* General Championships 2023 */}
-                            Research Scholar Election
+                            Research Council Election
                         </h3>
                         <div
                             style={{
