@@ -11,19 +11,19 @@ import { WARDEN_EMAIL } from "./constants";
 import Finished from "./Finished";
 
 const passProps = ({ user, updateUser, profile, updateProfile, HOSTEL, updateHOSTEL }) => {
-  if (user?.email === WARDEN_EMAIL) {
-    return [
-      {
-        path: "/",
-        element: <Layout user={user} />,
-        children: [
-          { path: "results", element: <Result user={user} /> },
-          { path: "/", element: <Navigate to="/results" replace /> },
-          { path: "*", element: <Navigate to="/results" replace /> },
-        ],
-      },
-    ];
-  }
+  // if (user?.email === WARDEN_EMAIL) {
+  //   return [
+  //     {
+  //       path: "/",
+  //       element: <Layout user={user} />,
+  //       children: [
+  //         { path: "results", element: <Result user={user} /> },
+  //         { path: "/", element: <Navigate to="/results" replace /> },
+  //         { path: "*", element: <Navigate to="/results" replace /> },
+  //       ],
+  //     },
+  //   ];
+  // }
 
   if (user?.errorCode)
     return [
